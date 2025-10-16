@@ -53,6 +53,7 @@
   /* Hero section mobile */
   .hero-area1 {
     min-height: auto;
+    text-align: center;
   }
 
   .hero-area1 .main-heading .span {
@@ -60,9 +61,34 @@
     margin-bottom: 12px;
   }
 
-  /* Industry slider mobile optimization */
+  /* HIDE HERO IMAGE ON MOBILE - Desktop only */
+  .hero-area1 .hero1-images {
+    display: none !important;
+  }
+
+  /* Center hero content on mobile */
+  .hero-area1 .main-heading {
+    text-align: center;
+  }
+
+  .hero-area1 .hero1-buttons {
+    justify-content: center;
+  }
+
+  /* Industry slider mobile optimization - SIMPLIFIED */
   .hero1-slider {
-    padding: 30px 0;
+    padding: 25px 0;
+  }
+
+  /* Hide industry slider title on very small screens to save space */
+  .industry-slider-title {
+    padding-top: 15px;
+    margin-bottom: 20px;
+  }
+
+  .industry-slider-title h2 {
+    font-size: 20px !important;
+    letter-spacing: 0.5px !important;
   }
 
   .industry-slider .slick-track {
@@ -71,25 +97,67 @@
   }
 
   .industry-item {
-    padding: 20px 15px !important;
-    min-width: 140px !important;
+    padding: 15px 12px !important;
+    min-width: 110px !important;
+    gap: 10px !important;
   }
 
   .industry-item i {
-    font-size: 42px !important;
+    font-size: 32px !important;
   }
 
   .industry-item span {
-    font-size: 14px !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
   }
 
-  /* Stats/Icon boxes mobile */
+  /* Stats/Icon boxes mobile - HIDE IMAGE, optimize layout */
   .chosse1 .row {
     display: flex;
     flex-direction: column;
   }
 
-  /* How it works section mobile */
+  /* Hide the stats section image on mobile for cleaner flow */
+  .chosse1 .col-lg-5 .image {
+    display: none !important;
+  }
+
+  /* Make stats boxes display in horizontal row on mobile */
+  .chosse1 .col-lg-2 {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-around !important;
+    gap: 10px;
+    margin-bottom: 30px !important;
+  }
+
+  .chosse1 .col-lg-2 > div {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .chosse1 .icon-box {
+    padding: 15px 10px !important;
+    margin-bottom: 0 !important;
+  }
+
+  .chosse1 .icon-box .icon img {
+    width: 32px !important;
+    height: 32px !important;
+  }
+
+  .chosse1 .icon-box .heading1 h3 {
+    font-size: 24px !important;
+    margin-top: 8px !important;
+  }
+
+  .chosse1 .icon-box .heading1 p {
+    font-size: 11px !important;
+    line-height: 1.3 !important;
+  }
+
+  /* How it works section mobile - HIDE IMAGE */
   .contact1[id="how-it-works"] .row {
     display: flex;
     flex-direction: column;
@@ -98,6 +166,22 @@
   .contact1[id="how-it-works"] .col-lg-6 {
     width: 100%;
     margin-bottom: 30px;
+  }
+
+  /* Hide the large "How It Works" image on mobile */
+  .contact1[id="how-it-works"] .work-img {
+    display: none !important;
+  }
+
+  /* Optimize "How It Works" step headings for mobile */
+  .contact1[id="how-it-works"] h4 {
+    font-size: 18px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .contact1[id="how-it-works"] p {
+    font-size: 14px !important;
+    margin-bottom: 20px !important;
   }
 
   /* Contact section improvements */
@@ -171,6 +255,77 @@
     white-space: normal;
     line-height: 1.4;
   }
+
+  /* MOBILE TYPOGRAPHY IMPROVEMENTS */
+  /* Hero section - punchy and clear */
+  .hero-area1 .main-heading h1 {
+    font-size: 26px !important;
+    line-height: 1.25 !important;
+    margin-bottom: 10px !important;
+  }
+
+  .hero-area1 .main-heading .span {
+    font-size: 13px !important;
+    font-weight: 600 !important;
+  }
+
+  .hero-area1 .main-heading p {
+    font-size: 15px !important;
+    line-height: 1.5 !important;
+  }
+
+  /* Section headings - clear hierarchy */
+  .heading1-w h2,
+  .heading1 h2 {
+    font-size: 24px !important;
+    line-height: 1.3 !important;
+    margin-bottom: 12px !important;
+  }
+
+  .heading1-w .span,
+  .heading1 .span {
+    font-size: 13px !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  /* Body text - readable and scannable */
+  .heading1-w p,
+  .heading1 p {
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 15px !important;
+  }
+
+  /* List items - clean and clear */
+  .icon-list li {
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+  }
+
+  /* MOBILE SPACING IMPROVEMENTS */
+  .sp {
+    padding: 35px 0 !important;
+  }
+
+  .space60 {
+    height: 25px !important;
+  }
+
+  .space30 {
+    height: 18px !important;
+  }
+
+  .space16 {
+    height: 12px !important;
+  }
+
+  /* Section spacing for better flow */
+  .chosse1,
+  .contact1,
+  .cta {
+    padding: 40px 0 !important;
+  }
 }
 
 /* Extra small devices (below 576px) */
@@ -183,16 +338,16 @@
 
   /* Industry slider very small screens */
   .industry-item {
-    padding: 15px 10px !important;
-    min-width: 120px !important;
+    padding: 12px 8px !important;
+    min-width: 100px !important;
   }
 
   .industry-item i {
-    font-size: 36px !important;
+    font-size: 28px !important;
   }
 
   .industry-item span {
-    font-size: 12px !important;
+    font-size: 11px !important;
   }
 
   /* Footer logo sizing */
@@ -202,15 +357,15 @@
 
   /* Reduce heading sizes further */
   h1 {
-    font-size: 24px !important;
-  }
-
-  h2 {
     font-size: 22px !important;
   }
 
+  h2 {
+    font-size: 20px !important;
+  }
+
   h3 {
-    font-size: 18px !important;
+    font-size: 17px !important;
   }
 
   h4 {
@@ -221,6 +376,103 @@
   .copyright-area .coppyright p {
     font-size: 12px;
     text-align: center;
+  }
+
+  /* OPTIMIZED CTA AND CONVERSION FORMS FOR EXTRA SMALL SCREENS */
+
+  /* CTA section - prioritize email capture */
+  .cta .heading1-w h2 {
+    font-size: 20px !important;
+    line-height: 1.3 !important;
+  }
+
+  .cta .heading1-w p {
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+  }
+
+  /* Email subscription form - full width, prominent */
+  .subscribe-area form {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
+
+  .subscribe-area input {
+    width: 100% !important;
+    padding: 14px !important;
+    font-size: 16px !important;
+    border-radius: 6px !important;
+  }
+
+  .subscribe-area .button {
+    width: 100% !important;
+  }
+
+  .subscribe-area button {
+    width: 100% !important;
+    padding: 14px 20px !important;
+    font-size: 15px !important;
+  }
+
+  /* Contact section - Calendly widget priority */
+  .contact1[id="contact"] .heading1-w h2 {
+    font-size: 22px !important;
+    line-height: 1.3 !important;
+  }
+
+  .contact1[id="contact"] .heading1-w p {
+    font-size: 14px !important;
+  }
+
+  /* Calendly form heading */
+  .contact1-form .heading1 h3 {
+    font-size: 18px !important;
+  }
+
+  .contact1-form .heading1 p {
+    font-size: 13px !important;
+  }
+
+  /* Contact boxes - compact but clear */
+  .contact1-box {
+    margin-bottom: 15px !important;
+  }
+
+  .contact1-box .heading p {
+    font-size: 12px !important;
+  }
+
+  .contact1-box .heading a {
+    font-size: 14px !important;
+  }
+
+  /* Stats boxes - extra compact on very small screens */
+  .chosse1 .col-lg-2 {
+    flex-direction: column !important;
+    gap: 15px !important;
+  }
+
+  .chosse1 .icon-box {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 12px !important;
+    text-align: left !important;
+    padding: 12px !important;
+  }
+
+  .chosse1 .icon-box .icon {
+    flex-shrink: 0;
+  }
+
+  .chosse1 .icon-box .heading1 h3 {
+    font-size: 20px !important;
+    margin-top: 0 !important;
+  }
+
+  .chosse1 .icon-box .heading1 p {
+    font-size: 11px !important;
   }
 }
 
@@ -240,6 +492,12 @@
 @media (min-width: 768px) and (max-width: 991px) {
   .hero-area1 {
     padding-top: 100px;
+    text-align: center;
+  }
+
+  /* Hide hero image on tablets too */
+  .hero-area1 .hero1-images {
+    display: none !important;
   }
 
   .main-heading h1 {
@@ -255,11 +513,37 @@
   .chosse1 .col-lg-2 {
     flex: 0 0 100%;
     max-width: 100%;
+    display: flex;
+    flex-direction: row !important;
+    justify-content: space-around;
+    margin-bottom: 30px;
   }
 
   .chosse1 .col-lg-5 {
     flex: 0 0 100%;
     max-width: 100%;
+  }
+
+  /* Hide stats image on tablet */
+  .chosse1 .col-lg-5 .image {
+    display: none !important;
+  }
+
+  /* Hide "How It Works" image on tablet */
+  .contact1[id="how-it-works"] .work-img {
+    display: none !important;
+  }
+
+  /* Center content */
+  .hero-area1 .main-heading,
+  .hero-area1 .hero1-buttons {
+    text-align: center;
+    justify-content: center;
+  }
+
+  /* Optimize Calendly widget for tablets */
+  .calendly-inline-widget {
+    height: 700px !important;
   }
 }
 
@@ -299,5 +583,80 @@ html {
   /* Image loading optimization */
   img {
     image-rendering: -webkit-optimize-contrast;
+  }
+}
+
+/* MOBILE CTA BUTTONS - Make them stand out for conversions */
+@media (max-width: 991px) {
+  .theme-btn1 {
+    background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%) !important;
+    box-shadow: 0 4px 12px rgba(26, 115, 232, 0.4) !important;
+    transition: all 0.3s ease !important;
+  }
+
+  .theme-btn1:hover,
+  .theme-btn1:active {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 16px rgba(26, 115, 232, 0.5) !important;
+  }
+
+  /* Ensure buttons are touch-friendly */
+  .theme-btn1,
+  .theme-btn2 {
+    min-height: 48px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 14px 24px !important;
+    font-weight: 600 !important;
+  }
+
+  /* Mobile footer optimization */
+  .footer1 {
+    text-align: center;
+  }
+
+  .footer1 .single-footer-items {
+    text-align: center;
+  }
+
+  .footer1 .menu-list {
+    text-align: center;
+  }
+
+  .footer1 .social-icon {
+    justify-content: center;
+  }
+
+  .footer1 .contact-box {
+    justify-content: center;
+  }
+}
+
+/* Extra emphasis on primary conversion points */
+@media (max-width: 767px) {
+  /* Hero CTA - primary action */
+  .hero-area1 .hero1-buttons .theme-btn1 {
+    font-size: 15px !important;
+    padding: 16px 24px !important;
+    font-weight: 700 !important;
+  }
+
+  /* Contact section CTA */
+  .contact1[id="contact"] .theme-btn1 {
+    width: 100% !important;
+    margin-bottom: 20px;
+  }
+
+  /* "How It Works" CTA */
+  .contact1[id="how-it-works"] .theme-btn1 {
+    padding: 16px 32px !important;
+    font-size: 16px !important;
+  }
+
+  /* Email subscription - most important conversion */
+  .subscribe-area .theme-btn1 {
+    background: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%) !important;
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.4) !important;
   }
 }
