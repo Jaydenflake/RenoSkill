@@ -1,0 +1,307 @@
+/* Mobile Responsive Enhancements for Reno Skill Website */
+/* Desktop-first approach - only override what's needed for smaller screens */
+
+/* Prevent horizontal scroll on all devices */
+body {
+  overflow-x: hidden;
+}
+
+/* Ensure images scale properly */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Fix compressed footer contact icons */
+.footer1 .single-footer-items .contact-box .icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer1 .single-footer-items .contact-box .icon img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+/* Industry slider title */
+.industry-slider-title {
+  text-align: center;
+  margin-bottom: 40px;
+  padding-top: 30px;
+}
+
+.industry-slider-title h2 {
+  font-size: 48px;
+  font-weight: 800;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  position: relative;
+  display: inline-block;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+}
+
+.industry-slider-title h2::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 5px;
+  background: linear-gradient(90deg, #1a73e8, #0d47a1);
+  border-radius: 3px;
+  box-shadow: 0 2px 4px rgba(26, 115, 232, 0.3);
+}
+
+/* Industry slider styling */
+.industry-item {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 30px 25px;
+  min-width: 180px;
+}
+
+.industry-item i {
+  font-size: 56px;
+  color: #ffffff;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+}
+
+.industry-item span {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  letter-spacing: 0.5px;
+}
+
+.industry-item:hover i {
+  color: #ffd700;
+  transform: scale(1.15);
+  filter: drop-shadow(0 4px 8px rgba(255,215,0,0.4));
+}
+
+.industry-item:hover span {
+  color: #ffd700;
+  transform: translateY(-2px);
+}
+
+/* Desktop and large screens - ensure optimal viewing */
+@media (min-width: 1200px) {
+  .calendly-inline-widget {
+    width: 100%;
+  }
+}
+
+/* Tablet view adjustments (768px - 1199px) */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .calendly-inline-widget {
+    min-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .main-heading h1 {
+    font-size: 36px;
+  }
+}
+
+/* Mobile and tablet touch targets (below 992px) */
+@media (max-width: 991px) {
+  /* Ensure touch targets are at least 44x44 pixels */
+  .mobile-nav ul li a {
+    padding: 12px 15px;
+    font-size: 16px;
+  }
+
+  /* Social media icons touch targets */
+  .social-icon li a {
+    min-width: 44px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Improve form inputs - prevent zoom on iOS */
+  .single-input input,
+  .single-input textarea {
+    font-size: 16px;
+  }
+}
+
+/* Mobile devices (below 768px) */
+@media (max-width: 767px) {
+  /* Calendly widget mobile optimization */
+  .calendly-inline-widget {
+    min-width: 100% !important;
+    width: 100% !important;
+    height: 650px !important;
+  }
+
+  /* Contact form adjustments */
+  .contact1-form {
+    padding: 20px 15px;
+  }
+
+  /* Typography scaling for mobile */
+  .heading1 h3 {
+    font-size: 22px;
+  }
+
+  .main-heading h1 {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  .main-heading p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .heading1-w h4 {
+    font-size: 20px;
+  }
+
+  /* Button sizing for mobile */
+  .theme-btn1,
+  .theme-btn2 {
+    padding: 12px 20px;
+    font-size: 14px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Spacing adjustments */
+  .sp {
+    padding: 40px 0;
+  }
+
+  .space60 {
+    height: 30px;
+  }
+
+  .space30 {
+    height: 20px;
+  }
+
+  .space70 {
+    height: 35px;
+  }
+
+  /* Layout improvements */
+  .contact1-box {
+    margin-bottom: 15px;
+  }
+
+  .work-img {
+    margin-bottom: 30px;
+  }
+
+  .contact1 .col-lg-6 {
+    margin-bottom: 30px;
+  }
+
+  .hero1-images {
+    margin-top: 30px;
+  }
+
+  /* Footer adjustments */
+  .single-footer-items {
+    margin-bottom: 30px;
+  }
+
+  .single-footer-items h3 {
+    font-size: 20px;
+  }
+
+  /* CTA section mobile layout */
+  .cta .col-lg-6 {
+    margin-bottom: 20px;
+  }
+
+  .subscribe-area form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .subscribe-area input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .subscribe-area button {
+    width: 100%;
+  }
+
+  /* Stats section */
+  .chosse1 .col-lg-2 {
+    margin-bottom: 20px;
+  }
+
+  .icon-box {
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+}
+
+/* Landscape phone optimization */
+@media (max-width: 767px) and (orientation: landscape) {
+  .calendly-inline-widget {
+    height: 500px !important;
+  }
+}
+
+/* Extra small devices (phones in portrait, below 576px) */
+@media (max-width: 575px) {
+  .contact1-form {
+    padding: 15px 10px;
+  }
+
+  /* Stack hero buttons vertically */
+  .hero1-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero1-buttons .theme-btn1,
+  .hero1-buttons .theme-btn2 {
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  /* Typography for very small screens */
+  .heading1 h3 {
+    font-size: 20px;
+  }
+
+  .main-heading h1 {
+    font-size: 24px;
+  }
+
+  .heading1-w h4 {
+    font-size: 18px;
+  }
+}
+
+/* Ultra-wide screens - prevent content from stretching too much */
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1400px;
+  }
+}
